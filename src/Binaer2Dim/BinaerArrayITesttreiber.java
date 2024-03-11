@@ -6,7 +6,6 @@ Nutzen Sie hierfür den Zufallszahlengenerator der Klasse Math
 */
 package Binaer2Dim;
 
-import java.util.Arrays;
 import java.util.Scanner;
 public class BinaerArrayITesttreiber {
 	
@@ -39,6 +38,7 @@ public class BinaerArrayITesttreiber {
 //	    	System.out.println();
 //	    }
 	BinaerArrayI.ausgeben(array);
+	sc.close();
 	
 }
 

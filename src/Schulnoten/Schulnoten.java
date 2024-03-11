@@ -31,6 +31,7 @@ public class Schulnoten {
 			
 		}
 		ausgeben(null);
+		sc.close();
 		
 	}
 	
