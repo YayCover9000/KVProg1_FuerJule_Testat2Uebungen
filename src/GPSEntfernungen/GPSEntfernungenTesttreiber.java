@@ -20,7 +20,11 @@ public class GPSEntfernungenTesttreiber {
 
           for (int i = 0; i < laufzeiten.length; i++) {
               int laufzeit;
-                  laufzeit = (int) (Math.random() * 1000) + 81;
+//                  laufzeit = (int) (Math.random() * 1000) + 81;
+              laufzeit = (int) (Math.random() * 1000);
+              if(laufzeit < 80) {
+            	  i -= 1;
+              }
               laufzeiten[i] = laufzeit;
           }
 //			for(int e: laufzeiten) {

@@ -1,5 +1,7 @@
 package GPSEntfernungen;
 
+
+
 //Formel: Entfernungsberechnung
 //
 //Entfernung = Laufzeit * Lichtgeschwindigkeit 
@@ -12,17 +14,18 @@ public class GPSEntfernungen {
 //Bitte beachten Sie die vorgegebene Reihenfolge der Parameter beim Programmieren.
 	public static void berechneEntfernungen(int laufzeiten[], double entfernungen[]) {
 		int lichtgeschwindigkeit = 299792458;
+		double dLichtgeschwindigkeit = lichtgeschwindigkeit *  0.000001;
 		if (laufzeiten != null && entfernungen != null) {
   		for (int i = 0; i < laufzeiten.length; i++) {
               // Laufzeit in Sekunden umwandeln (Millisekunden / 1000)
   			System.out.println("L"+laufzeiten[i]);
-              double laufzeitInSeconds = laufzeiten[i] / 100.0;
+              double laufzeitInSeconds = laufzeiten[i] / 1000.0;
               System.out.println("LS"+laufzeitInSeconds);
               // Entfernung berechnen (Laufzeit * Lichtgeschwindigkeit)
-              entfernungen[i] = (laufzeitInSeconds * lichtgeschwindigkeit)*1000;
+              entfernungen[i] = (laufzeitInSeconds * dLichtgeschwindigkeit)*1000;
           
   		}
-  		ausgeben(laufzeiten);
+//  		ausgeben(laufzeiten);
   		ausgeben(entfernungen);
 		}
 	}
@@ -38,12 +41,13 @@ public class GPSEntfernungen {
 			}
 		}
 	}
-	public static void ausgeben(int laufzeiten[]) {
-		if(laufzeiten != null) {
-			for(double e: laufzeiten) {
-				System.out.println("Laufzeiten: " + e);
-			}
-		}
-	}
+	 
+//	public static void ausgeben(int laufzeiten[]) {
+//		if(laufzeiten != null) {
+//			for(double e: laufzeiten) {
+//				System.out.println("Laufzeiten: " + e);
+//			}
+//		}
+//	}
 }
 
