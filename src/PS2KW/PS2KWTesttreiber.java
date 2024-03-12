@@ -14,13 +14,19 @@ Nutzen Sie hierbei den Zufallszahlengenerator der Klasse Math
 		int[] ps = new int[n];
 		
 		for(int i = 0; i < ps.length;i++) {
-			do {
-				ps[i] =  (int) (Math.random()*500);
-			}while (ps[i] > 500 && ps[i] < 0);
+//			do {
+//				ps[i] =  (int) (Math.random()*500);
+//			}while (ps[i] > 499 && ps[i] < 1);
+			
+			ps[i]= 1 + (int) (Math.random() * 499); 
+			
+			if(ps[i] <= 0 || ps[i] >= 500) {
+				System.out.println("FEHLER");
+			}
 		}
 //		for(int e : ps) {
 //			System.out.println("PS: " + e);
 //		}
-		PS2KW.berechnePS2KW(ps, null);
+		//PS2KW.berechnePS2KW(ps, null);
 	}
 }

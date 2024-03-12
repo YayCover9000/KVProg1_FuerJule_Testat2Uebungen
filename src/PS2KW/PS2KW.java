@@ -26,11 +26,11 @@ kW: Z*/
 			}
 		}
 	}
-	public static void ausgeben(int kw[]) {
-		if(kw != null) {
-			for(int e : kw) {
-				System.out.println("kW: " + e);
-			}
-		}
-	}
+//	public static void ausgeben(int kw[]) {
+//		if(kw != null) {
+//			for(int e : kw) {
+//				System.out.println("kW: " + e);
+//			}
+//		}
+//	}
 }
