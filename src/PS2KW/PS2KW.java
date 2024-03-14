@@ -1,5 +1,4 @@
 package PS2KW;
-
 public class PS2KW {
 	/*berechnung der kW-Werte aus den zufälligen PS-Werten, wobei:
 1PS=0,73549875kW
@@ -7,7 +6,7 @@ public class PS2KW {
 Hinweis 		Bitte beachten Sie die vorgegebene Reihenfolge der Parameter beim Programmieren.*/
 	public static void berechnePS2KW(int ps[], double kw[]) {
 		if(ps != null) {
-			kw = new double[ps.length];
+			
 			for(int i = 0; i < ps.length;i++) {
 				kw[i] = (ps[i] * 0.73549875);
 			}
@@ -26,11 +25,4 @@ kW: Z*/
 			}
 		}
 	}
-//	public static void ausgeben(int kw[]) {
-//		if(kw != null) {
-//			for(int e : kw) {
-//				System.out.println("kW: " + e);
-//			}
-//		}
-//	}
 }
