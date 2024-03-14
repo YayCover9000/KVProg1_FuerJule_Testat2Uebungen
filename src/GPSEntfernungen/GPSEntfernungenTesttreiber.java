@@ -7,31 +7,32 @@ package GPSEntfernungen;
 //3. Rufen Sie die folgenden Methoden der Klasse GPSEntfernungen auf. 
 import java.util.Scanner;
 public class GPSEntfernungenTesttreiber {
-	public static void main(String [] args) {
-		Scanner sc = new Scanner(System.in);
-		int [] laufzeiten = null;
-		double [] entfernungen = null;
-		int n = sc.nextInt();
-		
-		if (n != 0) {
-          sc.close();
-          laufzeiten = new int[n];
-          entfernungen = new double[n];
+//	public static int [] laufzeiten = null;
+//	public static double[] entfernungen = null;
 
-          for (int i = 0; i < laufzeiten.length; i++) {
-              int laufzeit;
-//                  laufzeit = (int) (Math.random() * 1000) + 81;
-              laufzeit = (int) (Math.random() * 1000);
-              if(laufzeit < 80) {
-            	  i -= 1;
-              }
-              laufzeiten[i] = laufzeit;
-          }
-//			for(int e: laufzeiten) {
-//				System.out.println(e);
-//			}
-//			System.out.println("*_*");
-		}
-		GPSEntfernungen.berechneEntfernungen(laufzeiten, entfernungen);
+	public GPSEntfernungenTesttreiber() {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		sc.close();
+		int[] laufzeiten = new int[n];
+		double[] entfernungen = new double[n];
+//		laufzeiten = new int[n];
+//		entfernungen = new double[n];
+		int laufzeit;
+		
+		for (int i = 0; i < laufzeiten.length; i++) {
+            laufzeit = (int) (Math.random() * 1000)+81;
+            if(laufzeit<81) {
+            	laufzeit=500;
+            }
+            laufzeiten[i] = laufzeit;              
+        }
+      GPSEntfernungen.berechneEntfernungen(laufzeiten, entfernungen);
+      GPSEntfernungen.ausgeben(entfernungen);
 	}
+	public static void main(String [] args) {
+      GPSEntfernungenTesttreiber Blobfisch= new GPSEntfernungenTesttreiber(); 
+        
+		}
+	
 }
