@@ -34,4 +34,5 @@ public class LottozahlenSortieren {
 		sortieren(lottozahlen);
 		ausgeben(lottozahlen);
 	}
+	
 }
